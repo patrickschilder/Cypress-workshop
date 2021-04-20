@@ -1,0 +1,23 @@
+{
+  "name": "cypress-workshop",
+  "version": "1.0.0",
+  "description": "<img src='https://github.com/ValoriSolutions/SALUTE_Javascript_Cypress/actions/workflows/nodejs.yml/badge.svg' alt='Status latest testrun'>",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^7.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djpasch/Cypress-workshop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djpasch/Cypress-workshop/issues"
+  },
+  "homepage": "https://github.com/djpasch/Cypress-workshop#readme"
+}

@@ -1,0 +1,27 @@
+#TestNG
+TestNg.xml
+ResultFolderPath.txt
+
+#Java, maven and intellij
+*.log
+*.class
+*.iml
+target/
+localrepo/
+out/
+test-output/
+Testfiles/
+testReports/
+logs/
+.idea/*
+.idea/
+*.xlsx
+
+#NodeJS / Cypress
+node_modules
+report
+cypress/videos
+cypress/report
+cypress/screenshots
+cypress.env.json*
+.http-mitm-proxy
