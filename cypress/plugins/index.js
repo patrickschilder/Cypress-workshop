@@ -19,4 +19,17 @@
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+
+  on('task', {
+    doSomethingSlow(text) {
+      const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
+
+      return new Promise((res) => {
+        sleep(3000).then(() => {
+          res(text)
+        })
+      })
+    }
+  })
+
 }
