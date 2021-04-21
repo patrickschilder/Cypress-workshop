@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("How Cypress works", () => {
+describe("Execution order", () => {
     it("Runs the click command only at the end", () => {
         cy.visit('https://webshop.mobiletestautomation.nl')
         cy.get('[name="s"]').type('Cypress')

@@ -27,15 +27,4 @@ context('Actions', () => {
         
         cy.log('Look at the console log (developer tools)')
     })
-
-    it('Mixing sync and async - not working', () => {
-        cy.log('Mixing sync and async - not working')
-        const menu = cy.get('[class="dropdown-item"]')
-        cy.log(menu.text());
-    });
-
-    it('Mixing sync and async - working', () => {
-        cy.log('Mixing sync and async - working')
-        cy.get('[class="dropdown-item"]').then(menu => cy.log(menu.text()));
-      });
 })

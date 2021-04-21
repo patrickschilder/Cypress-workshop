@@ -25,7 +25,7 @@ module.exports = (on, config) => {
       const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
 
       return new Promise((res) => {
-        sleep(3000).then(() => {
+        sleep(10000).then(() => {
           res(text)
         })
       })
