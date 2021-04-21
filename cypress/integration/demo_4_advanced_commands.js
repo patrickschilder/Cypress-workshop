@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe("Advanced commands - adding a product to shopping cart", () => {
-    it("Runs the click command only at the end", () => {
+    it("Advanced commands - adding a product to shopping cart", () => {
         cy.visit('https://webshop.mobiletestautomation.nl')
 
         cy.get('a:contains("Hummingbird printed sweater")').click()
@@ -27,6 +27,12 @@ describe("Advanced commands - adding a product to shopping cart", () => {
             cy.get('span:contains("Total")').next().should('have.text', '€34.75')
             cy.get('span:contains("Total")').siblings(1).should('have.text', '€34.75') // Siblings for example also works with multiple colums
         })
+
+    })
+
+    it("Advanced commands - using the viewport", () => {
+        cy.visit('https://webshop.mobiletestautomation.nl')
+        cy.viewport('iphone-8')
 
     })
 })
