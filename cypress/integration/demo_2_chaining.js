@@ -6,17 +6,19 @@ context('Actions', () => {
     })
   
     it('Example with asynchronous code without proper chaining', () => {
+        cy.log('Look at the console log (developer tools)')
+
         console.log('Example with asynchronous code without proper chaining')
         console.log('Hello')
 
         cy.task('doSomethingSlow','world').then(text => console.log(text))
         
         console.log('!')
-        
-        cy.log('Look at the console log (developer tools)')
     })
 
     it('Example with asynchronous code with proper chaining', () => {
+        cy.log('Look at the console log (developer tools)')
+
         console.log('Example with asynchronous code with proper chaining')
         console.log('Hello')
 
@@ -24,7 +26,5 @@ context('Actions', () => {
             console.log(text)
             console.log('!')
         })
-        
-        cy.log('Look at the console log (developer tools)')
     })
 })
