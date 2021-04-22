@@ -22,14 +22,19 @@ module.exports = (on, config) => {
 
   on('task', {
     doSomethingSlow(text) {
-      const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
-
-      return new Promise((res) => {
-        sleep(10000).then(() => {
-          res(text)
-        })
-      })
+      return myNodeJSfunction(text)
     }
   })
 
+}
+
+
+function myNodeJSfunction(text) {
+  const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
+
+  return new Promise((res) => {
+    sleep(10000).then(() => {
+      res(text)
+    })
+  })
 }
