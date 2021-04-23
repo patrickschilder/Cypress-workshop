@@ -22,19 +22,30 @@ module.exports = (on, config) => {
 
   on('task', {
     doSomethingSlow(text) {
-      return myNodeJSfunction(text)
+      return doSomethingSlowFunction(text)
+    },
+
+    doSomethingBackground({text1, text2}){
+      return doSomethingBackgroundFunction(text1,text2)
     }
   })
 
 }
 
+const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
 
-function myNodeJSfunction(text) {
-  const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
-
+function doSomethingSlowFunction(text) {
   return new Promise((res) => {
     sleep(10000).then(() => {
       res(text)
     })
   })
+}
+
+function doSomethingBackgroundFunction(text1, text2) {
+  sleep(10000).then(() => {
+    // This is not running in the browser 
+    console.log(text1 + ', ' +text2)
+  })
+  return true
 }
