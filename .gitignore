@@ -10,7 +10,6 @@ target/
 localrepo/
 out/
 test-output/
-Testfiles/
 testReports/
 logs/
 .idea/*
