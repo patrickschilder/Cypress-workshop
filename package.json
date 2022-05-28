@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "description": "<img src='https://github.com/ValoriSolutions/SALUTE_Javascript_Cypress/actions/workflows/nodejs.yml/badge.svg' alt='Status latest testrun'>",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
-    "cypress": "^9.2.0"
+    "cypress": "^9.7.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
