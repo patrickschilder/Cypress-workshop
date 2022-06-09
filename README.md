@@ -1,7 +1,7 @@
 # Cypress workshop
 
 ## Installation
-The installtion instructions are mainly for setting up the framework on windows.
+The installation instructions are mainly for setting up the framework on windows.
 
 ### Download NodeJs
 https://nodejs.org
@@ -35,9 +35,9 @@ or use the batch file provided `StartCypress.bat`
 
 ## Useful commands
 ### NPM
-`nmp outdated`: this will show you which dependencies have updated versions available
+`npm outdated`: this will show you which dependencies have updated versions available
 
-`npm update`: this will update automatically update the dependencies which don't have major changes 
+`npm update`: this will automatically update the dependencies which don't have major changes 
 
 `npm install <packagename>@latest`: use this command to update a dependencie with a major change
 
