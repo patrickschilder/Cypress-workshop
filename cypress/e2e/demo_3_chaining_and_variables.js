@@ -8,11 +8,14 @@ context('Actions', () => {
     it('Chaining and variables - not working', () => {
         cy.log('Mixing sync and async - not working')
         const menu = cy.get('[class="dropdown-item"]')
-        cy.log(menu.text());
-    });
+        cy.log(menu.text())
+    })
 
     it('Chaining and variables - working', () => {
         cy.log('Mixing sync and async - working')
-        cy.get('[class="dropdown-item"]').then(menu => cy.log(menu.text()));
-      });
+        cy.get('[class="dropdown-item"]').then(menu => {
+          cy.log(menu.text())
+        }
+        )
+      })
 })

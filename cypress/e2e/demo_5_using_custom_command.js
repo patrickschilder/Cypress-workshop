@@ -13,7 +13,7 @@ context('Actions', () => {
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
         cy.wait(5000)
         cy.get('[name="message"]').type(message)
-    });
+    })
 
     it('Filling in contact form using custom command', () => {
         cy.get('#contact-link').click()
@@ -23,6 +23,6 @@ context('Actions', () => {
         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`
         cy.wait(5000)
         cy.get('[name="message"]').fill(message)
-    });
+    })
 
 })

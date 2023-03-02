@@ -32,7 +32,7 @@ module.exports = (on, config) => {
 
 }
 
-const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs));
+const sleep = (waitTimeInMs) => new Promise(resolve => setTimeout(resolve, waitTimeInMs))
 
 function doSomethingSlowFunction(text) {
   return new Promise((res) => {

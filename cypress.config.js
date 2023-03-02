@@ -1,4 +1,4 @@
-const { defineConfig } = require("cypress");
+const { defineConfig } = require("cypress")
 
 module.exports = defineConfig({
   viewportWidth: 1400,
@@ -18,4 +18,4 @@ module.exports = defineConfig({
     },
     specPattern: ['cypress/e2e/**/*.{feature,features}','cypress/e2e/*.js'],
   },
-});
+})
