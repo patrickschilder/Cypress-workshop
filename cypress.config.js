@@ -6,7 +6,7 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   defaultCommandTimeout: 4000,
   pageLoadTimeout: 30000,
-  watchForFileChanges: false,
+  watchForFileChanges: true,
   taskTimeout: 90000,
   numTestsKeptInMemory: 30,
   blockHosts: ['*googleapis.com', '*microsoft.com', '*cloudflare.com'],
