@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress": "cypress run --config-file cypress.config.js"
+    "cypress:all": "cypress run --config-file cypress.config.js",
+    "cypress:single": "cypress run --config-file cypress.config.js --spec 'cypress/e2e/demo_5_using_custom_command.js'"
   },
   "repository": {
     "type": "git",

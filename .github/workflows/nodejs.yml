@@ -11,7 +11,7 @@ jobs:
       - name: Run Cypress
         run: |
           npm install
-          npm run cypress
+          npm run cypress:single
         # env:
           # Cypress variables should have the prefix "CYPRESS_"
           # CYPRESS_EMAIL_ADDRESS: "github_override@mail.com"
