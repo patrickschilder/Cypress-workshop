@@ -1,0 +1,46 @@
+name: End-to-end tests
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Run Cypress
+        run: |
+          npm install
+          npm run cypress
+        env:
+          # Cypress variables should have the prefix "CYPRESS_"
+          # CYPRESS_EMAIL_ADDRESS: "github_override@mail.com"
+          # CYPRESS_WebshopApiToken: ${{ secrets.WEBSHOP_API_TOKEN }}
+
+      - name: Merge test results into one
+        run: npm run report-merge-linux
+        if: always()
+
+        # In case cypress is running in a subfolder
+        # working-directory: TA-Cypress
+      - name: Publish E2E Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          check_name: E2E Test Results
+          files: cypress/report/**/*.xml
+          report_individual_runs: true
+
+      - name: Artifact report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-report
+          path: cypress/report
+
+      - name: Artifact video
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-video
+          path: cypress/videos

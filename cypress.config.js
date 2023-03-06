@@ -7,6 +7,7 @@ module.exports = defineConfig({
   defaultCommandTimeout: 4000,
   pageLoadTimeout: 30000,
   watchForFileChanges: true,
+  video: false,
   taskTimeout: 90000,
   numTestsKeptInMemory: 30,
   blockHosts: ['*googleapis.com', '*microsoft.com', '*cloudflare.com'],
