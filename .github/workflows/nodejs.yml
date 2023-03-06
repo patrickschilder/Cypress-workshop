@@ -12,7 +12,7 @@ jobs:
         run: |
           npm install
           npm run cypress
-        env:
+        # env:
           # Cypress variables should have the prefix "CYPRESS_"
           # CYPRESS_EMAIL_ADDRESS: "github_override@mail.com"
           # CYPRESS_WebshopApiToken: ${{ secrets.WEBSHOP_API_TOKEN }}
