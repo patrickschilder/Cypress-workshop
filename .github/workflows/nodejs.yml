@@ -17,9 +17,9 @@ jobs:
           # CYPRESS_EMAIL_ADDRESS: "github_override@mail.com"
           # CYPRESS_WebshopApiToken: ${{ secrets.WEBSHOP_API_TOKEN }}
 
-      - name: Merge test results into one
-        run: npm run report-merge-linux
-        if: always()
+      # - name: Merge test results into one
+      #   run: npm run report-merge-linux
+      #   if: always()
 
         # In case cypress is running in a subfolder
         # working-directory: TA-Cypress
