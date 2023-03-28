@@ -8,11 +8,6 @@ https://nodejs.org
 
 Download and install
 
-Set Environment variable (run as admin !!):
-```
-setx /M NODE_HOME "C:\Program Files\nodejs"
-```
-
 ### Download the repo
 Go to the folder where you want to setup up your framework. For example:
 ```
