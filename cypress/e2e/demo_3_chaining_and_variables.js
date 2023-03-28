@@ -17,6 +17,6 @@ context('Actions', () => {
           cy.log(menu.text())
           expect(menu.text()).to.contain('Fruit')
         }
-        )
-      })
+      )
+    })
 })

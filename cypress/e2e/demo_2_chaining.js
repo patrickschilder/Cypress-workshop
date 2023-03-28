@@ -13,7 +13,7 @@ context('Actions', () => {
 
         cy.task('doSomethingSlow','world').then(text => console.log(text))
         
-        console.log('!')
+        console.log('!') // This will be executed before the task is finished
     })
 
     it('Example with asynchronous code with proper chaining', () => {
@@ -24,7 +24,7 @@ context('Actions', () => {
 
         cy.task('doSomethingSlow','world').then(text => {
             console.log(text)
-            console.log('!')
+            console.log('!') // This will be executed after the task is finished
         })
     })
 
@@ -33,7 +33,7 @@ context('Actions', () => {
 
         console.log('Example with asynchronous code without resolving a promise')
         console.log('3: Hello')
-        cy.task('doSomethingBackground',{text1: 'world', text2: 'isn\'t it beautiful'})
+        cy.task('doSomethingBackground',{text1: 'world', text2: 'isn\'t it beautiful'}) // This will be executed even after test is finished
         console.log('!')
     })
 })
